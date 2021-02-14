@@ -45,11 +45,23 @@ namespace Button_Practice_two
             this.button_1 = new Button();
             this.button_2 = new Button();
 
-            this.button_1.Location = new Point(r.Next(0, this.Size.Width), r.Next(0, this.Size.Height));
-            this.button_2.Location = new Point(r.Next(0, this.Size.Width), r.Next(0, this.Size.Height));
-
             this.button_1.Size = new Size(50, 50);
             this.button_2.Size = new Size(50, 50);
+
+            this.button_1.Location = new Point(r.Next(0, this.Size.Width - this.button_1.Size.Width), r.Next(0, this.Size.Height - this.button_2.Size.Height));
+            this.button_2.Location = new Point(r.Next(0, this.Size.Width - this.button_2.Size.Width), r.Next(0, this.Size.Height - this.button_2.Size.Height));
+
+            if (r.Next(0, 2) == 1)
+            {
+                this.button_1.BackColor = Color.Red;
+                this.button_2.BackColor = Color.Green;
+            }
+            else
+            {
+                this.button_1.BackColor = Color.Green;
+                this.button_2.BackColor = Color.Red;
+            }
+
 
             this.Controls.Add(button_1);
             this.Controls.Add(button_2);
