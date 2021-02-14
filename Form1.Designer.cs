@@ -51,6 +51,7 @@ namespace Button_Practice_two
             this.button_1.Location = new Point(r.Next(0, this.Size.Width - this.button_1.Size.Width), r.Next(0, this.Size.Height - this.button_2.Size.Height));
             this.button_2.Location = new Point(r.Next(0, this.Size.Width - this.button_2.Size.Width), r.Next(0, this.Size.Height - this.button_2.Size.Height));
 
+            //if (r.Next() % 2 == 1)
             if (r.Next(0, 2) == 1)
             {
                 this.button_1.BackColor = Color.Red;
@@ -62,6 +63,8 @@ namespace Button_Practice_two
                 this.button_2.BackColor = Color.Red;
             }
 
+            button_1.MouseMove += new System.Windows.Forms.MouseEventHandler(Mouse_Hover);
+            button_2.MouseMove += new System.Windows.Forms.MouseEventHandler(Mouse_Hover);
 
             this.Controls.Add(button_1);
             this.Controls.Add(button_2);

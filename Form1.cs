@@ -17,5 +17,16 @@ namespace Button_Practice_two
         {
             InitializeComponent();
         }
+
+        public void Mouse_Hover(object obj, EventArgs argv)
+        {
+            if (((Button)obj).BackColor == Color.Red)
+            {
+                var relativePoint = this.PointToClient(Cursor.Position);
+
+                ((Button)obj).Location = new Point(relativePoint.X - ((Button)obj).Size.Width / 2, relativePoint.Y - ((Button)obj).Size.Height / 2);
+                this.Text = Cursor.Position.ToString();
+            }
+        }
     }
 }
