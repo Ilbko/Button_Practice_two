@@ -66,6 +66,9 @@ namespace Button_Practice_two
             button_1.MouseMove += new System.Windows.Forms.MouseEventHandler(Mouse_Hover);
             button_2.MouseMove += new System.Windows.Forms.MouseEventHandler(Mouse_Hover);
 
+            button_1.MouseClick += new MouseEventHandler(Mouse_Click);
+            button_2.MouseClick += new MouseEventHandler(Mouse_Click);
+
             this.Controls.Add(button_1);
             this.Controls.Add(button_2);
         }
