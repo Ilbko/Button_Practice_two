@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Button_Practice_two
 {
@@ -41,6 +42,17 @@ namespace Button_Practice_two
             this.Text = "Form1";
             this.ResumeLayout(false);
 
+            this.button_1 = new Button();
+            this.button_2 = new Button();
+
+            this.button_1.Location = new Point(r.Next(0, this.Size.Width), r.Next(0, this.Size.Height));
+            this.button_2.Location = new Point(r.Next(0, this.Size.Width), r.Next(0, this.Size.Height));
+
+            this.button_1.Size = new Size(50, 50);
+            this.button_2.Size = new Size(50, 50);
+
+            this.Controls.Add(button_1);
+            this.Controls.Add(button_2);
         }
         Button button_1;
         Button button_2;

@@ -12,6 +12,7 @@ namespace Button_Practice_two
 {
     public partial class Form1 : Form
     {
+        Random r = new Random();
         public Form1()
         {
             InitializeComponent();
